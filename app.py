@@ -37,7 +37,9 @@ THETA_REVIEW = 0.40
 @st.cache_resource(show_spinner="Loading models...")
 def load_models():
     with open(f'{MODEL_DIR}/rf_model.pkl','rb')   as f: rf  = pickle.load(f)
-    with open(f'{MODEL_DIR}/xgb_model.pkl','rb')  as f: xgb = pickle.load(f)
+    import xgboost as xgb_lib
+    xgb = xgb_lib.XGBClassifier()
+    xgb.load_model(f'{MODEL_DIR}/xgb_model.json')
     with open(f'{MODEL_DIR}/scaler.pkl','rb')      as f: sc  = pickle.load(f)
     with open(f'{MODEL_DIR}/iso_forest.pkl','rb')  as f: iso = pickle.load(f)
     with open(f'{MODEL_DIR}/feature_names.json')   as f: fnames = json.load(f)
