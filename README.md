@@ -20,7 +20,7 @@ This Streamlit application demonstrates the Explainable AI framework with Human-
 ## Local Setup
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/otujacob/XAI_Fraud_HITL
 cd streamlit_app
 pip install -r requirements.txt
 streamlit run app.py
