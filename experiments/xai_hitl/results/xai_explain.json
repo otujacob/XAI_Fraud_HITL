@@ -1,0 +1,263 @@
+{
+ "n_alerts": 5893,
+ "n_alert_fraud": 60,
+ "deployed": "XGB+IF",
+ "features": [
+  "amount",
+  "amount_log",
+  "amount_vs_mean_ratio",
+  "amount_sum_24h",
+  "amount_mean_7d",
+  "amount_std_7d",
+  "tx_count_24h",
+  "amount_mean_total",
+  "amount_std_total",
+  "tx_count_total",
+  "channel_diversity",
+  "online_channel_ratio",
+  "velocity_score",
+  "hour_sin",
+  "hour_cos",
+  "day_sin",
+  "day_cos",
+  "month_sin",
+  "month_cos",
+  "is_peak_hour",
+  "channel_ATM",
+  "channel_ECOM",
+  "channel_IB",
+  "channel_Mobile",
+  "channel_POS",
+  "channel_Web",
+  "bank_Bank_1",
+  "bank_Bank_10",
+  "bank_Bank_2",
+  "bank_Bank_3",
+  "bank_Bank_4",
+  "bank_Bank_5",
+  "bank_Bank_6",
+  "bank_Bank_7",
+  "bank_Bank_8",
+  "bank_Bank_9",
+  "location_Abuja",
+  "location_Lagos",
+  "location_Ogun",
+  "location_Other",
+  "location_Oyo",
+  "location_Rivers",
+  "age_group_18-25",
+  "age_group_26-35",
+  "age_group_36-45",
+  "age_group_46-55",
+  "age_group_56-65",
+  "age_group_65+",
+  "if_anomaly_score"
+ ],
+ "group_share": {
+  "Customer history": 0.5552715063095093,
+  "Amount": 0.039843350648880005,
+  "Time": 0.11898908019065857,
+  "Channel, bank, location, age": 0.25641101598739624,
+  "Anomaly score": 0.029485071077942848
+ },
+ "top_features": {
+  "amount_vs_mean_ratio": 0.5193864107131958,
+  "tx_count_total": 0.28378617763519287,
+  "tx_count_24h": 0.2656274437904358,
+  "amount_mean_total": 0.26552703976631165,
+  "channel_ECOM": 0.21135714650154114,
+  "channel_IB": 0.1995282620191574,
+  "amount_std_total": 0.17632052302360535,
+  "amount_mean_7d": 0.15568675100803375,
+  "amount_sum_24h": 0.1545843631029129,
+  "month_sin": 0.15247796475887299
+ },
+ "adasyn_shap_check": {
+  "deployed_has_adasyn": false,
+  "spearman_global": 0.8576530612244897,
+  "top5_overlap": 3,
+  "group_share_alt": {
+   "Customer history": 0.41724735498428345,
+   "Amount": 0.0497308187186718,
+   "Time": 0.2534482181072235,
+   "Channel, bank, location, age": 0.2668178677558899,
+   "Anomaly score": 0.012755741365253925
+  },
+  "alt_test_pr_auc": 0.014286725272444416,
+  "top_alt": [
+   "tx_count_24h",
+   "amount_vs_mean_ratio",
+   "month_cos",
+   "month_sin",
+   "tx_count_total"
+  ],
+  "top_dep": [
+   "amount_vs_mean_ratio",
+   "tx_count_total",
+   "tx_count_24h",
+   "amount_mean_total",
+   "channel_ECOM"
+  ]
+ },
+ "additivity_max_abs_error": 8.106231689453125e-06,
+ "faithfulness": {
+  "1": {
+   "mean_drop_shap": 0.3147287964820862,
+   "mean_drop_random": 0.010947166010737419,
+   "cleared_shap": 0.9633463431189547,
+   "cleared_random": 0.09054810792465637,
+   "mean_score": 0.4049425423145294
+  },
+  "3": {
+   "mean_drop_shap": 0.3305668830871582,
+   "mean_drop_random": 0.031064990907907486,
+   "cleared_shap": 0.9918547429153233,
+   "cleared_random": 0.21530629560495504,
+   "mean_score": 0.4049425423145294
+  },
+  "5": {
+   "mean_drop_shap": 0.33500969409942627,
+   "mean_drop_random": 0.053143780678510666,
+   "cleared_shap": 0.9962667571695232,
+   "cleared_random": 0.3157984048871542,
+   "mean_score": 0.4049425423145294
+  },
+  "10": {
+   "mean_drop_shap": 0.3403726816177368,
+   "mean_drop_random": 0.10034873336553574,
+   "cleared_shap": 0.9989818428644154,
+   "cleared_random": 0.47741388087561515,
+   "mean_score": 0.4049425423145294
+  }
+ },
+ "stability": {
+  "spearman_mean": 0.8554426530612244,
+  "spearman_p10": 0.7767244897959181,
+  "top5_jaccard_mean": 0.5895317460317461,
+  "top1_same": 0.896,
+  "mean_abs_score_change": 0.12395326048135757
+ },
+ "top1_group": {
+  "fraud": {
+   "Customer history": 1.0,
+   "Amount": 0.0,
+   "Time": 0.0,
+   "Channel, bank, location, age": 0.0,
+   "Anomaly score": 0.0
+  },
+  "false_alert": {
+   "Customer history": 0.9933139036516372,
+   "Amount": 0.00017143836790673754,
+   "Time": 0.00205726041488085,
+   "Channel, bank, location, age": 0.002400137150694325,
+   "Anomaly score": 0.00205726041488085
+  }
+ },
+ "top3_freq": {
+  "fraud": {
+   "amount_vs_mean_ratio": 0.9666666666666668,
+   "amount_std_total": 0.35,
+   "amount": 0.3333333333333333,
+   "tx_count_24h": 0.30000000000000004,
+   "tx_count_total": 0.26666666666666666,
+   "amount_mean_total": 0.21666666666666665
+  },
+  "false_alert": {
+   "amount_vs_mean_ratio": 0.9382821875535745,
+   "tx_count_24h": 0.4416252357277559,
+   "amount_std_total": 0.35162009257671867,
+   "amount_mean_total": 0.3456197496999829,
+   "tx_count_total": 0.18241042345276873,
+   "amount": 0.11074918566775245
+  }
+ },
+ "mean_signed_shap": {
+  "fraud": {
+   "amount_vs_mean_ratio": 1.8927762508392334,
+   "amount_std_total": 0.012042578309774399,
+   "tx_count_24h": 0.1620282679796219,
+   "amount": 0.20913483202457428,
+   "amount_mean_total": 0.05326172336935997,
+   "tx_count_total": -0.2282678335905075
+  },
+  "false_alert": {
+   "amount_vs_mean_ratio": 1.255060076713562,
+   "tx_count_24h": -0.03945933282375336,
+   "amount_std_total": -0.07196880877017975,
+   "amount_mean_total": 0.009080629795789719,
+   "tx_count_total": -0.09362435340881348,
+   "month_sin": -0.131784588098526
+  }
+ },
+ "counterfactual": {
+  "share_clearable": 0.6736806380451383,
+  "share_clearable_fraud": 0.6833333333333333,
+  "share_clearable_false": 0.6735813475055717,
+  "share_clear_le50": 0.6139487527575089,
+  "median_reduction": 0.24785446462613792,
+  "median_reduction_fraud": 0.4701300421585387,
+  "median_reduction_false": 0.24785446462613792,
+  "n": 5893
+ },
+ "examples": [
+  {
+   "fraud": true,
+   "score": 0.9187417030334473,
+   "tier": "BLOCK",
+   "amount": 353491.96875,
+   "text": "Relative amount = 10.89 (raises risk, +2.72); Running amount std. = NGN 14,350 (raises risk, +0.73); Amount = NGN 353,492 (raises risk, +0.61)",
+   "cf_reduction": 0.8147443159967303
+  },
+  {
+   "fraud": false,
+   "score": 0.9328100681304932,
+   "tier": "BLOCK",
+   "amount": 283913.90625,
+   "text": "Relative amount = 10.53 (raises risk, +2.59); Running amount std. = NGN 15,139 (raises risk, +0.69); Amount = NGN 283,914 (raises risk, +0.39)",
+   "cf_reduction": 0.8147443159967303
+  }
+ ],
+ "latency_ms": {
+  "prep": {
+   "median": 6.82926399997541,
+   "p95": 10.128686400037168,
+   "p99": 11.52712753995047,
+   "mean": 7.203464850003229
+  },
+  "score": {
+   "median": 0.6412524999177549,
+   "p95": 0.9854693999386654,
+   "p99": 1.136392899898055,
+   "mean": 0.6647346659979121
+  },
+  "shap": {
+   "median": 1.9170220000432892,
+   "p95": 2.8541135001773896,
+   "p99": 3.6690111099824194,
+   "mean": 2.0779981490011323
+  },
+  "text": {
+   "median": 0.039681999965068826,
+   "p95": 0.06673295010841682,
+   "p99": 0.09784638997871296,
+   "mean": 0.043416787998012296
+  },
+  "cf": {
+   "median": 7.790000999989388,
+   "p95": 11.547559249959246,
+   "p99": 13.102273170022727,
+   "mean": 8.286248840000326
+  },
+  "total": {
+   "median": 17.3312200000737,
+   "p95": 25.021482700185516,
+   "p99": 28.32600912011003,
+   "mean": 18.27586329300061
+  }
+ },
+ "latency_hw": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+  "threads": 1,
+  "n": 1000
+ }
+}

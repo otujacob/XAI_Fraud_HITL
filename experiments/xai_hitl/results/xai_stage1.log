@@ -1,0 +1,16 @@
+rows 2102151 features 48 | fraud tr/va/te 1374 408 277
+adasyn None 0.0318 0.0137 18s
+adasyn 0.01 0.0312 0.015 36s
+adasyn 0.02 0.0315 0.0143 55s
+adasyn 0.05 0.0198 0.008 74s
+adasyn 0.2 0.0195 0.0078 94s
+selected ADASYN ratio 0.02
+RF {'pr_auc': 0.017, 'roc_auc': 0.7685, 'rec_fpr1': 0.2419, 'rec_fpr01': 0.0939, 'prec_top1': 0.0157} 246s
+IF alone {'pr_auc': 0.0022, 'roc_auc': 0.6574, 'rec_fpr1': 0.0433, 'rec_fpr01': 0.0144, 'prec_top1': 0.0029} 297s
+RF+ADASYN {'pr_auc': 0.012, 'roc_auc': 0.7223, 'rec_fpr1': 0.2058, 'rec_fpr01': 0.0758, 'prec_top1': 0.0136} 456s
+XGB {'pr_auc': 0.0125, 'roc_auc': 0.7307, 'rec_fpr1': 0.2058, 'rec_fpr01': 0.0686, 'prec_top1': 0.0133} 500s
+XGB+IF {'pr_auc': 0.0137, 'roc_auc': 0.7424, 'rec_fpr1': 0.1949, 'rec_fpr01': 0.083, 'prec_top1': 0.0128} 542s
+XGB+IF+ADASYN {'pr_auc': 0.0143, 'roc_auc': 0.739, 'rec_fpr1': 0.2058, 'rec_fpr01': 0.083, 'prec_top1': 0.0136} 598s
+Hybrid ensemble {'pr_auc': 0.0148, 'roc_auc': 0.7425, 'rec_fpr1': 0.2166, 'rec_fpr01': 0.0903, 'prec_top1': 0.0143} 800s
+deployed XGB+IF 0.5941389203071594 0.2817157506942749 {'block': {'n': 526, 'fraud': 25, 'legit': 501}, 'review': {'n': 5367, 'fraud': 35, 'legit': 5332}, 'approve': {'n': 414538, 'fraud': 217, 'legit': 414321}}
+done 803s
