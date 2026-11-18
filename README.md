@@ -1,6 +1,8 @@
 # XAI + Human-in-the-Loop Fraud Detection (FraudBench-NG)
 
-Code and results for the paper "Explainable AI with Human-in-the-Loop Feedback for Real-Time Fraud Detection in Nigerian Inter-Bank Payment Systems".
+Code and results for the paper "Explain, Review, Learn: A Human-in-the-Loop Framework for Explainable and Adaptive Inter-Bank Fraud Detection" by Otu Jacob, Colin Kuka, Adam Knowles and Sahan Perera (Wrexham University).
+
+The experiments use the FraudBench-NG benchmark, a synthetic NIBSS-calibrated dataset of Nigerian inter-bank payments (described in a separate paper submitted to *Discover Cybersecurity*). The dataset and its generator are in the FraudBench-NG repository: https://github.com/otujacob/FraudBench-NG
 
 ## Repository layout
 
